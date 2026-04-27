@@ -1,8 +1,7 @@
-// types/index.ts
 export interface TextInputProps {
+  value: string;
   onTextChange: (text: string) => void;
   placeholder?: string;
-  initialValue?: string;
 }
 
 export interface TextStats {
@@ -10,10 +9,11 @@ export interface TextStats {
   wordCount: number;
   readingTime: number; // in minutes
 }
- 
+
 export interface StatsDisplayProps {
   stats: TextStats;
   showReadingTime?: boolean;
+  wordGoal?: number;
 }
 
 export interface CharacterCounterProps {
@@ -21,16 +21,3 @@ export interface CharacterCounterProps {
   maxWords?: number;
   targetReadingTime?: number; // in minutes
 }
-
-// export type TextInputProps = {
-//   value: string;
-//   onChange: (value: string) => void;
-// };
-
-// export type StatsDisplayProps = {
-//   count: number;
-// };
-
-// export type CharacterCounterState = {
-//   text: string;
-// };
