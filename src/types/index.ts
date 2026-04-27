@@ -5,7 +5,6 @@ export interface TextInputProps {
   initialValue?: string;
 }
 
-// types/index.ts
 export interface TextStats {
   characterCount: number;
   wordCount: number;
@@ -17,7 +16,6 @@ export interface StatsDisplayProps {
   showReadingTime?: boolean;
 }
 
-// types/index.ts
 export interface CharacterCounterProps {
   minWords?: number;
   maxWords?: number;
