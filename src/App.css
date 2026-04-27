@@ -182,3 +182,89 @@
     border-right-color: var(--border);
   }
 }
+
+.character-counter {
+  width: min(860px, 100%);
+  padding: 32px;
+  display: grid;
+  gap: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 24px;
+}
+
+.character-counter__header {
+  display: grid;
+  gap: 10px;
+}
+
+.character-counter__description {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.text-input__field {
+  width: 100%;
+  min-height: 180px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg);
+  color: var(--text);
+  resize: vertical;
+  font: inherit;
+}
+
+.stats-display {
+  display: grid;
+  gap: 18px;
+}
+
+.stats-display__grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.stats-display__item {
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+}
+
+.stats-display__item span {
+  display: block;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.stats-display__progress {
+  display: grid;
+  gap: 10px;
+}
+
+.stats-display__progress-label {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+.stats-display__progress progress {
+  width: 100%;
+  height: 12px;
+  accent-color: var(--accent);
+}
+
+.character-counter__feedback {
+  display: grid;
+  gap: 8px;
+  color: var(--text-muted);
+}
+
+@media (max-width: 640px) {
+  .character-counter {
+    padding: 20px;
+  }
+}
