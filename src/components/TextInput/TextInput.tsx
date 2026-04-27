@@ -1,36 +1,19 @@
-// components/TextInput/TextInput.tsx
-import React from 'react';
-import { TextInputProps } from '../../types';
- 
-export const TextInput: React.FC<TextInputProps> = ({
+import type { TextInputProps } from '../../types'
+
+export default function TextInput({
+  value,
   onTextChange,
-  placeholder = 'Start typing...',
-  initialValue = ''
-}) => {
+  placeholder = 'Start typing...'
+}: TextInputProps) {
   return (
-    <div className="w-full">
+    <div className="text-input">
       <textarea
-        className="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+        className="text-input__field"
         placeholder={placeholder}
-        defaultValue={initialValue}
-        onChange={(e) => onTextChange(e.target.value)}
-        rows={6}
+        value={value}
+        onChange={(event) => onTextChange(event.target.value)}
+        rows={8}
       />
     </div>
-  );
-};
-
-// type TextInputProps = {
-//   value: string;
-//   onChange: (value: string) => void;
-// };
-
-// export default function TextInput({ value, onChange }: TextInputProps) {
-//   return (
-//     <input
-//       type="text"
-//       value={value}
-//       onChange={(event) => onChange(event.target.value)}
-//     />
-//   );
-// }
+  )
+}
